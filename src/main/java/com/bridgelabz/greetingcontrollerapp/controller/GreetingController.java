@@ -32,4 +32,5 @@ public class GreetingController {
     public Greeting greetingById(@PathVariable ("id") long id){
         return greetingService.getGreetingById(id);
     }
+
 }
