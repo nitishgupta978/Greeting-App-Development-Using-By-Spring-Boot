@@ -4,10 +4,7 @@ import com.bridgelabz.greetingcontrollerapp.model.Greeting;
 import com.bridgelabz.greetingcontrollerapp.model.User;
 import com.bridgelabz.greetingcontrollerapp.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -30,6 +27,9 @@ public class GreetingController {
         user.setLastName(lname);
         return greetingService.addGreeting(user);
 
-
+    }
+    @GetMapping(value = {"/{id}"})
+    public Greeting greetingById(@PathVariable ("id") long id){
+        return greetingService.getGreetingById(id);
     }
 }
