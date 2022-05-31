@@ -21,7 +21,7 @@ public class GreetingController {
 
     @Autowired
     private IGreetingService greetingService;
-    @GetMapping(value = {"","/"})
+    @GetMapping("/getdata")
     public Greeting greeting(@RequestParam(value = "fName", defaultValue = "Word!!") String fname,
                              @RequestParam (value = "lName", defaultValue = "")String lname){
 //        return new Greeting(counter.incrementAndGet(),String.format(template,fname,lname));

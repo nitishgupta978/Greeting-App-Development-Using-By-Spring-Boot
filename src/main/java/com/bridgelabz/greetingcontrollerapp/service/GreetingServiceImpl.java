@@ -14,7 +14,7 @@ public class GreetingServiceImpl implements IGreetingService{
 
     @Autowired
     private IGreetingRepository greetingRepository;
-    private  static final  String template = "Hello,%s,%s !";
+    private  static final  String template = "Hello , %s ";
     private final AtomicLong counter = new AtomicLong();
     @Override
     public Greeting addGreeting(User user) {
