@@ -26,14 +26,21 @@ public class GreetingServiceImpl implements IGreetingService{
     public Greeting getGreetingById(long id) {
         return greetingRepository.findById(id).get();
     }
-    public void customDelete(long id) {
-        if(id != id){
-            this.delete(id);
-        }
+
+    @Override
+    public void delete(long id) {
+        greetingRepository.deleteById(id);
     }
 
-    private void delete(long id) {
-    }
+//    private void customDelete(long id) {
+//        if(id != id){
+//            this.delete(id);
+//        }
+////        return greetingRepository.deleteById(id);
+//    }
+
+//    private void delete(long id) {
+//    }
 
 
 }

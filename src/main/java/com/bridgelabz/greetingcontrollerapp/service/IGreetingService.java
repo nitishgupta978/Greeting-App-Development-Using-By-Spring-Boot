@@ -7,4 +7,8 @@ public interface IGreetingService {
     Greeting addGreeting(User user);
 
     Greeting getGreetingById(long id);
+
+    void delete(long id);
+
+//   Greeting delete(Greeting greetingById);
 }
